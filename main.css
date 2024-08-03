@@ -1,0 +1,61 @@
+body {
+    background: #000;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.login-container, .chat-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-container input, .chat-container input, .chat-container button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-container input[type="text"], .chat-container input[type="text"] {
+    width: 70%;
+}
+
+#messages {
+    height: 400px;
+    width: 800px;
+    overflow-y: auto;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+@keyframes matrix {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Digital_rain_animation_small_letters_clear.gif') repeat;
+    opacity: 0.1;
+    z-index: -1;
+    animation: matrix 10s linear infinite;
+}

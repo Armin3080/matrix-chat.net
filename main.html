@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h1>Join Chat</h1>
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <input type="color" id="color" value="#ff0000">
+        <button onclick="joinChat()">Join</button>
+    </div>
+    <div class="chat-container" id="chatContainer" style="display: none;">
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Type a message">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
